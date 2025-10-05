@@ -1,8 +1,7 @@
 import inspect
 from typing import List, Callable
 
-from chat import ollama_chat
-from utils import txt_writer, output_conversion, send_email, send_whatsapp
+from utils import output_conversion
 from config import EmailConfig, Whatsappconfig
 
 
@@ -70,7 +69,6 @@ class Sequential:
                 if layer.model_id:
                     args.append(layer.model_id)
                 args.append(function_result)
-            print(args)
             # Merge with extra keyword arguments provided at init
             output = layer.func(*args, **layer.extra_args)
 

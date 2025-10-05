@@ -125,3 +125,5 @@ cython_debug/
 .DS_Store
 Thumbs.db
 *.txt
+nevolite.py
+test*.py

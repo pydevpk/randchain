@@ -87,8 +87,8 @@ def send_whatsapp(whatsapp_config: Whatsappconfig, message: str):
             body=message,
             to=to_number
         )
-        print(f"✅ Message sent successfully! SID: {msg.sid}")
-        return msg.sid
+        print(f"✅ Message sent successfully!")
+        return msg.status
     except Exception as e:
         print(f"❌ Error sending WhatsApp message: {e}")
         return False
